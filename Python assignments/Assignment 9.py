@@ -1,11 +1,11 @@
 name = input("enter employee name:")
 
-if len(name.split(" "))==2:
-    first,last = name.split(" ")
+if len(name.split(" ")) == 2:
+    first, last = name.split(" ")
     middle = ""
 else:
   first, middle, last = name.split(" ")
-  
+
 print("First = {first}".format(first=first.capitalize()))
 if middle:
     print("Middle = {middle}".format(middle=middle.capitalize()))
@@ -18,5 +18,5 @@ employee_id = 1
 
 email = f"{first.lower()}.{last.lower()}{employee_id}@company.com"
 
-#print(f""" firstname:" {first_name)
+employee_list = []
 
