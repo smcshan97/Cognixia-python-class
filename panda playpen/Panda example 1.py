@@ -15,3 +15,17 @@ df.shape
 df_spec = pd.read_csv("/content/churn.csv",
                       usecols=['Gender', 'Age', 'Tenure', 'Balance'])
 df_spec.head()
+
+df_partial = pd.read_csv("/content/churn.csv", nrows=5000)
+df_partial.shape
+(5000, 14)
+
+df_sample = df.sample(n=1000)
+df_sample.shape
+(1000, 10)
+
+df_sample2 = df.sample(frac=0.1)
+df_sample2.shape
+(1000, 10)
+
+df.isna().sum()
