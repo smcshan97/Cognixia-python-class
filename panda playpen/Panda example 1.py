@@ -29,3 +29,8 @@ df_sample2.shape
 (1000, 10)
 
 df.isna().sum()
+missing_index = np.random.randint(10000, size=20)
+df.loc[missing_index, ['Balance', 'Geography']] = np.nan
+df.iloc[missing_index, -1] = np.nan
+mode = df['Geography'].value_counts().index[0]
+df['Geography'].fillna(value=mode, inplace=True)
